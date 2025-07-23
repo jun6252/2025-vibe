@@ -33,7 +33,7 @@ html_code = """
 
     #center-arrow {
       position: absolute;
-      top: 50%;
+      top: 0%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(0deg);
       z-index: 10;
@@ -142,7 +142,7 @@ function spinWheel() {
 }
 
 function stopWheel() {
-  let degrees = (startAngle * 180 / Math.PI + 270) % 360;  // 위쪽이 기준이므로 +90 → +270
+  let degrees = (startAngle * 180 / Math.PI + 90) % 360;  // 위쪽이 기준이므로 +90 → +270
   const arcDegrees = arc * 180 / Math.PI;
   const index = Math.floor((360 - degrees) / arcDegrees) % hobbies.length;
   const selected = hobbies[index];
